@@ -1,22 +1,22 @@
 # Task List for AI-Powered Blog Publishing System
 
 ## Database Setup
-- [ ] Create Supabase project
-- [ ] Initialize database schema
-  - [ ] Create `topics` table
-  - [ ] Create `posts` table
-  - [ ] Create `post_versions` table
-  - [ ] Create `images` table
-- [ ] Set up Row Level Security (RLS) policies
-- [ ] Create necessary indexes
+- [x] Create Supabase project
+- [x] Initialize database schema
+  - [x] Create `topics` table
+  - [x] Create `posts` table
+  - [x] Create `post_versions` table
+  - [x] Create `images` table
+- [x] Set up Row Level Security (RLS) policies
+- [x] Create necessary indexes
 
 ## API Endpoints
-- [ ] Topics API
-  - [ ] GET /api/topics - List all topics
-  - [ ] POST /api/topics - Create new topic
-  - [ ] PUT /api/topics/:id - Update topic
-  - [ ] DELETE /api/topics/:id - Delete topic
-  - [ ] POST /api/topics/reorder - Reorder topics
+- [x] Topics API
+  - [x] GET /api/v1/topics/ - List all topics
+  - [x] POST /api/v1/topics/ - Create new topic
+  - [x] PUT /api/v1/topics/{topic_id} - Update topic
+  - [x] DELETE /api/v1/topics/{topic_id} - Delete topic
+  - [x] POST /api/v1/topics/reorder/ - Reorder topics
 
 - [ ] Posts API
   - [ ] GET /api/posts - List posts (with filters)
