@@ -1,0 +1,78 @@
+# Windsurf Configuration
+# This file contains project-specific rules and settings for Windsurf AI assistant
+
+# Project Rules Configuration
+rules:
+  # Project Awareness & Context
+  - name: Project Context
+    description: Read PLANNING.md at start and check TASK.md before starting tasks
+    enabled: true
+  - name: Consistency
+    description: Use consistent naming, file structure, and architecture patterns from PLANNING.md
+    enabled: true
+
+  # Code Structure & Quality
+  - name: PEP 8 Compliance
+    description: Follow PEP 8 style guide for Python code
+    enabled: true
+  - name: Type Hints
+    description: Use Python type hints for all function signatures
+    enabled: true
+  - name: Code Formatting
+    description: Use Black for code formatting
+    enabled: true
+  - name: Documentation
+    description: Use Google-style docstrings for all functions and classes
+    enabled: true
+  - name: Import Organization
+    description: Use relative imports within packages and organize imports clearly
+    enabled: true
+  - name: File Size Limit
+    description: No file should exceed 500 lines of code
+    
+  # Version Control Rules
+  - name: Commit Conventions
+    description: Follow conventional commit messages (feat, fix, docs, style, refactor, test, chore)
+    enabled: true
+  - name: Module Organization
+    description: Organize code into clearly separated modules by feature/responsibility
+    enabled: true
+
+  # Testing & Reliability
+  - name: Test Coverage
+    description: Maintain high test coverage (target: 80%+) including expected use, edge cases, and failure cases
+    enabled: true
+  - name: Test Organization
+    description: Place tests in /tests directory mirroring app structure
+    enabled: true
+  - name: Test Maintenance
+    description: Update tests when making changes to existing logic
+    enabled: true
+
+  # Workflow & Task Management
+  - name: Task Tracking
+    description: Mark completed tasks in TASK.md immediately and add new TODOs to "Discovered During Work" section
+    enabled: true
+  - name: Documentation Updates
+    description: Update README.md for new features and add inline comments for complex logic
+    enabled: true
+
+# Project Settings
+settings:
+  language: python
+  formatter: black
+  linter: flake8
+  test_framework: pytest
+  orm: sqlalchemy
+  api_framework: fastapi
+  validation: pydantic
+
+# Ignore patterns for code analysis
+ignore_patterns:
+  - "**/__pycache__/*"
+  - "**/.pytest_cache/*"
+  - "**/venv/*"
+  - "**/node_modules/*"
+  - "**/.git/*"
+  - "**/.windsurf-config.yaml"
+  - "**/.ignore/*"
